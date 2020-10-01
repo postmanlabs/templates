@@ -16,7 +16,7 @@ The template is available at a short url:
 
 _If you plan on using the template in your classroom please try it out in Postman yourself first. Open the first request, send it, and open the Visualize view on the response. The instructions guide you through the steps–but you are also welcome to add your own context or any additional info you feel learners will benefit from._
 
-Please check out the [Postman student curriculum](../student.md) for pointers on topics. The list is generic but you are welcome to choose topics to suit your own programs and learning contexts. If you'd like to make suggestions on the curriculum or classroom experience [please submit an issue](https://github.com/postmanlabs/templates/issues)!
+Please check out the [Postman student curriculum](student.md) for pointers on topics. The list is generic but you are welcome to choose topics to suit your own programs and learning contexts. If you'd like to make suggestions on the curriculum or classroom experience [please submit an issue](https://github.com/postmanlabs/templates/issues)!
 
 ## Postman Classroom Slides
 

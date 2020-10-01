@@ -12,7 +12,7 @@ The Postman Classroom template walks learners through API and Postman fundamenta
 
 The template is available at a short url:
 
-* [bit.ly/postman-classroom](bit.ly/postman-classroom)
+* [bit.ly/postman-classroom](http://bit.ly/postman-classroom)
 
 _If you plan on using the template in your classroom please try it out in Postman yourself first. Open the first request, send it, and open the Visualize view on the response. The instructions guide you through the steps–but you are also welcome to add your own context or any additional info you feel learners will benefit from._
 
@@ -22,7 +22,7 @@ Please check out the [Postman student curriculum](../student.md) for pointers on
 
 The slide deck is available at a short url—it's in Google Slides but you can download and edit it however you like.
 
-* [bit.ly/postman-classroom-slides](bit.ly/postman-classroom-slides)
+* [bit.ly/postman-classroom-slides](http://bit.ly/postman-classroom-slides)
 
 ## Postman Support and Community
 

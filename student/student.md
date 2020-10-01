@@ -1,6 +1,6 @@
-# Student Curriculum
+# Postman Classroom Curriculum
 
-Postman curriculum for student experts.
+This curriculum is for teaching Postman in classroom contexts.
 
 ## Pre-requisites / preparatory topics
 

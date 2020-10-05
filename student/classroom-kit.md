@@ -10,9 +10,19 @@ Here you will find supporting resources you can use to build Postman into your l
 
 The Postman Classroom template walks learners through API and Postman fundamentals. Learners can import the template, send the first request, and be guided through next steps by the response data via the Postman visualizer.
 
-The template is available at a short url:
+![Visualizer](lesson-visualizer.jpg)
 
-* [bit.ly/postman-classroom](http://bit.ly/postman-classroom)
+A template is a Postman collection that is published online and that you can [import into Postman](https://learning.postman.com/docs/getting-started/importing-templates/). Here's how the classroom template works:
+
+* The template uses an API hosted on [Glitch](https://glitch.com/), and a Postman mock server.
+* The API / mock endpoints are designed specifically for learning, so the response data includes information about the request, together with next steps.
+* The template includes a script for presenting the response information in the Postman [visualizer](https://learning.postman.com/docs/sending-requests/visualizer/), so that it renders as a tutorial, with text, images, and example code.
+* The learner completes the collection by editing request components, and adding new requests.
+* Each Postman collection is represented as JSON data, which you can retrieve via a public URL. When they have completed the steps, the learner copies their collection's public link into the final request to retrieve the JSON data. The request runs a test script on the collection JSON to check for completeness. The tests will pass if the learner has completed all of the required collection edits.
+
+The classroom template is available at a short url:
+
+* [**bit.ly/postman-classroom**](http://bit.ly/postman-classroom)
 
 _If you plan on using the template in your classroom please try it out in Postman yourself first. Open the first request, send it, and open the Visualize view on the response. The instructions guide you through the steps–but you are also welcome to add your own context or any additional info you feel learners will benefit from._
 
@@ -22,7 +32,7 @@ Please check out the [Postman classroom curriculum](student.md) for pointers on 
 
 The slide deck is available at a short url—it's in Google Slides but you can download and edit it however you like.
 
-* [bit.ly/postman-classroom-slides](http://bit.ly/postman-classroom-slides)
+* [**bit.ly/postman-classroom-slides**](http://bit.ly/postman-classroom-slides)
 
 ## Postman Support and Community
 

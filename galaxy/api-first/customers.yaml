@@ -40,7 +40,7 @@ paths:
                 schema:
                     $ref: '#/components/schemas/Customer'
       responses:
-        '200':
+        '201':
           description: Confirmation of the added customer
           content:
             application/json:

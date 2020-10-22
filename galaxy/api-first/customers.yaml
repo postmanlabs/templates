@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   version: '1.0'
   title: Customers
-  description: 'This is a spec file for Postman Galaxy 2020 API First training! Open the raw file and save it locally. In Postman navigate to **APIs** and create a new API, giving it the name **Customers**, version '1.0' and import your downloaded file.'
+  description: 'This is a spec file for Postman Galaxy 2020 API First training! Open the raw file and save it locally. In Postman navigate to **APIs** and create a new API, giving it the name "Customers", version "1.0" and import your downloaded file.'
 servers:
   - url: 'https://669950d5-2da7-4207-a56c-bfe0825afafb.mock.pstmn.io'
 paths:

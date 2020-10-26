@@ -127,7 +127,7 @@ Select the `Customer mocks` collection and open the collection **Variables**. Th
 
 > You could have either a collection variable or another environment variable named `url` with another location, e.g. for your prod API, selecting and deselecting environments to switch between them with the same requests. Any environment var will override a collection var of the same name.
 
-<!--todo: optionally go back into docs collection, add a url var to point to the original mock and make baseurl point to {{url}} so that with no env selected it hits original collection var url-->
+<!--todo: optionally go back into docs collection, add a url var to point to the original mock and make baseurl point to {{url}} so that with no env selected it hits original collection var url OR use different api e.g. glitch for original requests so is less confusing-->
 <!--todo: link environment to api-->
 
 **Send** one of the requests in the mock collection. This time it will hit the new mock you created (you can check where it sent in the **Console**).

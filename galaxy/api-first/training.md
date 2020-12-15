@@ -14,8 +14,8 @@ This directory includes supporting resources for the API First training session 
 
 To get started, open the [customers](customers.yaml) (raw) file and download it. In Postman navigate to the new workspace you created for this session, choose **APIs** on the left, and click **+** to create a new API.
 
-* 'Customers' as the name
-* '1.0' as the version
+* `Customers` as the name
+* `1.0` as the version
 * Import your downloaded spec file
 
 **Save** the file–Postman will validate your schema and alert you to any issues within it.
@@ -35,7 +35,7 @@ Take a quick look at the tabs in the **API** builder–we'll get to know them be
 
 Let's go ahead and generate a Postman collection from the spec. Click **Generate collection**. First let's create a collection we can use to work on documentation for the API.
 
-* Enter the name 'Customer docs'
+* Enter the name `Customer docs`
 * Select **API Documentation**
 
 > Take a quick look at the advanced options–we don't need them for now but you can tailor the detail of how your collections generate from the spec.
@@ -117,11 +117,11 @@ Next we're going to create a collection we can use with a mock server we're also
 
 When we create the mock server, its address will be stored in a variable with this name, and we will be able to switch between the original server and the new mock using an environment.
 
-**Save** the spec and **Generate Collection** again, this time choosing **API Mocking**. Give your collection the name 'Customer mocks' and **Generate** it.
+**Save** the spec and **Generate Collection** again, this time choosing **API Mocking**. Give your collection the name `Customer mocks` and **Generate** it.
 
-Name your mock server 'Mock customers' and check the box to save the URL as an environment variable. Postman will create a new environment for the mock as well as generating the mock and collection.
+Name your mock server `Mock customers` and check the box to save the URL as an environment variable. Postman will create a new environment for the mock as well as generating the mock and collection.
 
-Select the new environment, it will have the same name as the mock server: 'Mock customers'. Click the eye button to see that it has a `url` variable with the address of your new mock server.
+Select the new environment, it will have the same name as the mock server: `Mock customers`. Click the eye button to see that it has a `url` variable with the address of your new mock server.
 
 Select the `Customer mocks` collection and open the collection **Variables**. The `baseUrl` references the `url` variable you added to the spec, which will now have the value in the selected environment.
 
@@ -164,7 +164,7 @@ Go back into the API **Develop** tab and validate the mock collection again, rev
 
 <!--todo: contracts intro-->
 
-The final collection we're going to generate is for testing. Back in the API, hit **Generate Collection** again, this time choosing **Contract Testing**, with the name 'Customer contract tests'.
+The final collection we're going to generate is for testing. Back in the API, hit **Generate Collection** again, this time choosing **Contract Testing**, with the name `Customer contract tests`.
 
 In the new collection, open the `GET` request that returns a particular customer. In the **Tests** tab for the request, add a test from the snippets on the right (click **<** if they don't display by default). Add **Status code: Code is 200** to the tests, **Save**, and **Send** the request. The test should pass.
 
@@ -205,11 +205,11 @@ pm.test('Schema is valid', function() {
 
 ## 6. Add a monitor
 
-Finally, let's monitor the API. In the API **Observe** tab, click **Add monitor** &gt; **Create new monitor**. Click **Use existing collection** and choose the 'Customer contract tests' collection.
+Finally, let's monitor the API. In the API **Observe** tab, click **Add monitor** &gt; **Create new monitor**. Click **Use existing collection** and choose the `Customer contract tests` collection.
 
 > A monitor is the same as using the collection runner, or Newman. It runs your collection on a schedule and alert you to any failed tests by notification email.
 
-Give your monitor the name 'Monitor customers', select the 'Mock customers' environment, choose a frequency, and create your monitor.
+Give your monitor the name `Monitor customers`, select the `Mock customers` environment, choose a frequency, and create your monitor.
 
 Click the link to open the monitoring page in the web dashboard. Rather than waiting for the scheduled time, hit **Run**! There will be a short delay while your monitor runs but when it completes you will see an overview of the test results.
 

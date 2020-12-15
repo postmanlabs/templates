@@ -29,7 +29,7 @@ You don't need to worry too much about the detail in the spec, but note the foll
 * The request and response body schema are defined in the `components` at the end of the spec.
 * The examples include dynamic variable references (with the syntax `{{$randomValue}}`) that Postman will use to generate random property values in the docs and mocks for the collections we generate.
 
-Take a quick look at the tabs in the **API** builder–we'll get to know them better as we work through the session. We'll generate collections for a few different purposes including documentation and testing, all based on the spec, and link elements such as mock servers and monitors to it so that it becomes our single source of truth for the API.
+Take a quick look at the tabs in the **API** builder–we'll get to know them better as we work through the session. We'll generate collections for a few different purposes including documentation and testing, all based on the spec, and link elements such as mock servers and monitors to it so that it becomes our single source of truth for the API. Notice that you can comment and share the API to collaborate with teammates–Postman can also generate reports on your API to give stakeholders an overview of how it's performing.
 
 ## 2. Generate a documentation collection
 
@@ -224,7 +224,3 @@ Give your monitor the name `Monitor customers`, select the `Mock customers` envi
 Click the link to open the monitoring page in the web dashboard. Rather than waiting for the scheduled time, hit **Run**! There will be a short delay while your monitor runs but when it completes you will see an overview of the test results.
 
 Navigate back to the workspace / API and click the monitor name in **Observe**. You will see an overview of the monitor runs. Click a run and scroll down to see the detail of any test fails. You can filter the results and drill down to individual requests.
-
-<!--todo: show commenting, sharing, mention reporting-->
-<!--todo: make workspace public, talk through explore, link to submission-->
-<!--todo: follow up resources-->

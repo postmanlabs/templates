@@ -4,7 +4,7 @@ This directory includes supporting resources for the API First training session 
 
 <!--todo: api first intro-->
 
-**Before you start, make sure you have the Postman agent installed–we're going to be working in [Postman on the web](http://go.postman.co/build/) (not the desktop app). Make sure you also create a new workspace for the session, so that you can share it later to request your API First credentials.**
+**Before you start, make sure you have the Postman agent installed–we're going to be working in [Postman on the web](http://go.postman.co/build/) (not the desktop app). Make sure you also create a new workspace for the session, so that you can share it later to request your API First certification.**
 
 <!--todo: share short url to this page-->
 
@@ -51,11 +51,15 @@ Open the new collection and take a look at how the requests have been generated.
 
 Try sending the requests (make sure the desktop agent is selected). _Initially the requests are sending to the mock server we created before the session, but you'll send to your own mock later._
 
+### Validate
+
 Postman will validate your collections against the linked spec as you work, but while you're in the request builder you'll only see an alert if your request is failing validation. Let's introduce an error intentionally so that we can see the validation in action.
 
 * In the `POST` request, edit the **Body** to remove the `id`, which is flagged as required in the spec and will therefore make the response body invalid if it isn't present.
 * **Save** the request–you should see a warning about the issue next to the request name. Click it to see further detail.
 * Reinstate the `id` that you removed and **Save** the request.
+
+### View the docs
 
 Let's have a look at how the spec information populates into the documentation for the collection. With a request open, click the little docs icon at the top right.
 
@@ -121,6 +125,8 @@ When we create the mock server, its address will be stored in a variable with th
 
 Name your mock server `Mock customers` and check the box to save the URL as an environment variable. Postman will create a new environment for the mock as well as generating the mock and collection.
 
+### Use environments
+
 Select the new environment, it will have the same name as the mock server: `Mock customers`. Click the eye button to see that it has a `url` variable with the address of your new mock server.
 
 Select the `Customer mocks` collection and open the collection **Variables**. The `baseUrl` references the `url` variable you added to the spec, which will now have the value in the selected environment.
@@ -132,12 +138,16 @@ Select the `Customer mocks` collection and open the collection **Variables**. Th
 
 **Send** one of the requests in the mock collection. This time it will hit the new mock you created (you can check where it sent in the **Console**).
 
+### Author examples
+
 You can edit your examples, for example if you prefer not to use the dynamic variables, or if you want to use a different one. Let's edit an example in the new mock collection to make it invalid.
 
 * Open the example for the `GET` request that retrieves a single specific customer.
 * In the response body, remove the "name" property and **Save**.
 
 In the API **Develop** tab, validate the linked mock. Click to review the issues and make the suggested changes, confirming and returning to the workspace / spec. _Make sure you reselect the mocks environment whenever you leave and return to the workspace._
+
+### Edit the spec
 
 Back in the spec, let's make a change to the examples and see how that propagates to the collection. Add a new property to the `Confirm` schema and make it required, so that the whole schema looks like this:
 
@@ -207,7 +217,7 @@ pm.test('Schema is valid', function() {
 
 Finally, let's monitor the API. In the API **Observe** tab, click **Add monitor** &gt; **Create new monitor**. Click **Use existing collection** and choose the `Customer contract tests` collection.
 
-> A monitor is the same as using the collection runner, or Newman. It runs your collection on a schedule and alert you to any failed tests by notification email.
+> A monitor is similar to using the collection runner, or Newman. It runs your collection on a schedule and alerts you to any failed tests by notification email.
 
 Give your monitor the name `Monitor customers`, select the `Mock customers` environment, choose a frequency, and create your monitor.
 

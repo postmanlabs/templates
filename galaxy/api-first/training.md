@@ -250,4 +250,4 @@ In the workspace overview (click the workspace name at the top left of Postman),
 
 > Note that a Postman team admin can set the account to require approval to make a workspace public via the __Community Manager__ role.
 
-Fill out the form bit.ly/galaxy-first (if anything is missing we will follow up with you).
+Fill out the form [bit.ly/galaxy-first](https://bit.ly/galaxy-first) (if anything is missing we will follow up with you).

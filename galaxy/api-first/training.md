@@ -1,26 +1,43 @@
-# Postman Galaxy 2020 - API First Training
+# Postman Galaxy 2021 - API First Training
 
-This directory includes supporting resources for the API First training session at Postman Galaxy 2020! During the session you're going to work through generating collections from an API specification file that you'll import and edit.
+This directory includes supporting resources for the API First training session at Postman Galaxy 2021! During the session you're going to work through generating collections from an API specification file that you'll import and edit in Postman.
 
-<!--todo: api first intro-->
+> Adopting a best practice approach to your API development process isn't as much of a hurdle as you might expect.
+> 
+> By starting from an OpenAPI specification in Postman, you can generate multiple other components within a robust framework that delivers reliability and performance.
+> 
+> Having a spec act as your single source of truth sets your API product or project up for governance, maintainability, effective adoption, and ultimately a competitive advantage.
 
-**Before you start, make sure you have the Postman agent installed–we're going to be working in [Postman on the web](http://go.postman.co/build/) (not the desktop app). Make sure you also create a new workspace for the session, so that you can share it later to request your API First certification.**
+**Before you start, make sure you have the Postman agent installed–we're going to be working in [Postman on the web](http://go.postman.co/build/) (not the desktop app). Make sure you also create a new workspace for the session–and make sure you choose a Team workspace, so that you can share it later by making it public, forwarding the link to request your API First certification.**
 
-<!--todo: share short url to this page-->
+You can access this page at the following short link: bit.ly/learn-api-first
 
-<!--todo: add toc-->
+* [Import the starter spec](#1-import-the-starter-spec)
+* [Generate a documentation collection](#2-generate-a-documentation-collection)
+  * [Validate](#validate)
+  * [View the docs](#view-the-docs)
+* [Add a new endpoint](#3-add-a-new-endpoint)
+* [Create a mock collection](#4-create-a-mock-collection)
+  * [Use environments](#use-environments)
+  * [Author examples](#author-examples)
+  * [Edit the spec](#edit-the-spec)
+* [Add a test suite](#5-add-a-test-suite)
+* [Add a monitor](#6-add-a-monitor)
+* [Complete your submission](#7-complete-your-submission)
 
 ## 1. Import the starter spec
 
-To get started, open the [customers](customers.yaml) (raw) file and download it. In Postman navigate to the new workspace you created for this session, choose **APIs** on the left, and click **+** to create a new API.
+To get started, open the [customers](customers.yaml) file in a new tab and switch to the raw view, then download / save it locally.
 
-* `Customers` as the name
-* `1.0` as the version
-* Import your downloaded spec file
+In [Postman](https://go.postman.co/build), navigate to the new workspace you created for this session, choose **APIs** on the left, and click **+** to create a new API.
 
-**Save** the file–Postman will validate your schema and alert you to any issues within it.
+* `Customers` as the name.
+* `1.0` as the version.
+* Import your downloaded spec file.
 
-> Try introducing a yaml syntax error into your spec file, or add an invalid element, to see how Postman highlights validation issues. Click the alert along the bottom to see more detail. As you edit the validation will update. The editor will also prompt you with element suggestions as you type.
+**Save** the API–Postman will validate your schema and alert you to any issues within it. Open the __Define__ tab to see the specification YAML.
+
+> Try introducing a yaml syntax error into your spec file, or add an invalid element, to see how Postman highlights validation issues. Click the alert along the bottom to see more detail. As you edit, the validation will update. The editor will also prompt you with element suggestions as you type.
 
 You don't need to worry too much about the detail in the spec, but note the following:
 
@@ -35,8 +52,8 @@ Take a quick look at the tabs in the **API** builder–we'll get to know them be
 
 Let's go ahead and generate a Postman collection from the spec. Click **Generate collection**. First let's create a collection we can use to work on documentation for the API.
 
-* Enter the name `Customer docs`
-* Select **API Documentation**
+* Enter the name `Customer docs`.
+* Select **API Documentation**.
 
 > Take a quick look at the advanced options–we don't need them for now but you can tailor the detail of how your collections generate from the spec.
 
@@ -44,12 +61,12 @@ Click **Generate Collection** and Postman will add it in **Collections**. _If yo
 
 Open the new collection and take a look at how the requests have been generated.
 
-* By default your requests will be grouped in folders by path (you can change this to use tags from your spec).
+* By default your requests will be grouped in folders by path (you can change this to use tags from your spec using the advanced settings).
 * Your request names are pulled from the summaries in your spec.
 * The URL indicated in the spec is stored as a collection level variable named `baseUrl`.
-* The parameters, request bodies, and examples all populate from the examples in your spec (request details are auto-generated based on type if your spec doesn't include examples). _Since we used Postman dynamic variable references the examples will regenerate each time you send a mock request or view the docs._
+* The parameters, request bodies, and examples all populate from the examples in your spec (request details are auto-generated based on type if your spec doesn't include examples). _Since we used Postman dynamic variable references, the examples will regenerate each time you send a mock request or view the docs._
 
-Try sending the requests (make sure the desktop agent is selected). _Initially the requests are sending to the mock server we created before the session, but you'll send to your own mock later._
+Try sending the requests (make sure the desktop agent is selected). _Initially the requests will send to the mock server we created before the session, but you'll send to your own mock later._
 
 ### Validate
 
@@ -76,7 +93,7 @@ Pop back into the Customers API and open the **Develop** tab. Your linked docs c
 * Click the validation warning and choose **Review details**.
 * Postman will suggest changes to make your collection valid. **Make all changes to the request** and **Confirm**.
 
-Return to the workspace and API. We will add more linked collections and other elements to the API as we work through the session.
+We will add more linked collections and other elements to the API as we work through the session.
 
 ## 3. Add a new endpoint
 
@@ -109,7 +126,7 @@ The endpoint is going to be at the path `/customers` and will return a list of c
         $ref: '#/components/schemas/Customer'
 ```
 
-**Save** the spec. Back in **Develop**, validate the linked docs collection again. Click to **Review Issues**. Select the suggested changes and confirm, then navigate back to the workspace / collection to see the new endpoint.
+**Save** the spec. Back in **Develop**, validate the linked docs collection again. Click to **Review Issues**. Select the suggested changes and confirm, then navigate back to the collection to see the new endpoint.
 
 ## 4. Create a mock collection
 
@@ -145,7 +162,7 @@ You can edit your examples, for example if you prefer not to use the dynamic var
 * Open the example for the `GET` request that retrieves a single specific customer.
 * In the response body, remove the "name" property and **Save**.
 
-In the API **Develop** tab, validate the linked mock. Click to review the issues and make the suggested changes, confirming and returning to the workspace / spec. _Make sure you reselect the mocks environment whenever you leave and return to the workspace._
+In the API **Develop** tab, validate the linked mock. Click to review the issues and make the suggested changes, confirming and returning to the workspace / spec. _Make sure you reselect the mocks environment if you leave and return to the workspace._
 
 ### Edit the spec
 
@@ -166,13 +183,13 @@ Back in the spec, let's make a change to the examples and see how that propagate
             example: 'OK'
 ```
 
-**Save** the spec and go back into the `POST` request in the mock collection–**Send** it. An issue will appear–click to see more detail.
+**Save** the spec and go back into the `POST` request in the mock collection–**Send** it.
 
-Go back into the API **Develop** tab and validate the mock collection again, reviewing the issues, making the changes, and navigating back to the workspace / collection (selecting the mock environment again). **Send** the mocks `POST` request again–the new property should be returned.
+Go back into the API **Develop** tab and validate the mock collection again, reviewing the issues, making the changes, and navigating back to the collection. **Send** the mocks `POST` request again–the new property should be returned.
 
 ## 5. Add a test suite
 
-<!--todo: contracts intro-->
+Combining test suites with an API-spec driven workflow builds a level of consistency and compliance into your API development and deployment pipeline.
 
 The final collection we're going to generate is for testing. Back in the API, hit **Generate Collection** again, this time choosing **Contract Testing**, with the name `Customer contract tests`.
 
@@ -224,3 +241,13 @@ Give your monitor the name `Monitor customers`, select the `Mock customers` envi
 Click the link to open the monitoring page in the web dashboard. Rather than waiting for the scheduled time, hit **Run**! There will be a short delay while your monitor runs but when it completes you will see an overview of the test results.
 
 Navigate back to the workspace / API and click the monitor name in **Observe**. You will see an overview of the monitor runs. Click a run and scroll down to see the detail of any test fails. You can filter the results and drill down to individual requests.
+
+## 7. Complete your submission
+
+Once you have all of your collections generated from your spec as outlined above and you're happy with your workspace, you can go ahead and make it public, then share the link to get your API First badge and swag!
+
+In the workspace overview (click the workspace name at the top left of Postman), use the __Sharing__ &gt; __Visibility__ control to set the workspace to public. Once your workspace public, anyone can open it in the browser and fork your collections to edit or send the requests in them. You can copy the workspace link from your browser address bar after making it public.
+
+> Note that a Postman team admin can set the account to require approval to make a workspace public via the __Community Manager__ role.
+
+Fill out the form bit.ly/galaxy-first (if anything is missing we will follow up with you).

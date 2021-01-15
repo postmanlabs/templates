@@ -1,0 +1,127 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0",
+    "title": "Customers",
+    "description": "This is a spec file for Postman Galaxy 2021 API First training! Open the raw file and save it locally. In Postman, navigate to **APIs** and create a new API, giving it the name \"Customers\", version \"1.0\" and import your downloaded file."
+  },
+  "servers": [
+    {
+      "url": "https://669950d5-2da7-4207-a56c-bfe0825afafb.mock.pstmn.io"
+    }
+  ],
+  "paths": {
+    "/customer": {
+      "get": {
+        "summary": "Retrieve details for a particular customer",
+        "operationId": "getCustomer",
+        "tags": [
+          "customer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Customer ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Details of the requested customer",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Customer"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add a new customer",
+        "operationId": "addCustomer",
+        "tags": [
+          "customer"
+        ],
+        "requestBody": {
+          "description": "Details of the new customer",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Customer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Confirmation of the added customer",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Confirm"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Customer": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "company"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string",
+            "example": "{{$randomFullName}}"
+          },
+          "tag": {
+            "type": "string",
+            "example": "{{$randomBsNoun}}"
+          },
+          "role": {
+            "type": "string",
+            "example": "{{$randomJobTitle}}"
+          },
+          "company": {
+            "type": "string",
+            "example": "{{$randomCompanyName}}"
+          },
+          "vertical": {
+            "type": "string",
+            "example": "{{$randomProductName}}"
+          }
+        }
+      },
+      "Confirm": {
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "New customer added!"
+          }
+        }
+      }
+    }
+  }
+}

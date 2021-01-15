@@ -101,7 +101,7 @@ We will add more linked collections and other elements to the API as we work thr
 
 Let's make a change to the spec. We have endpoints for adding and retrieving a customer, but we need one for retrieving a list of customers.
 
-In **APIs** &gt; **Customers** &gt; **Define**. Add a new endpoint inside `paths`, after the `post` request and before the `components` (making sure it's indented from `paths`).
+In **APIs** &gt; **Customers** &gt; **Define**. Add a new endpoint inside `paths`, after the `post` request (adding a comma before the previous element–you can hit the **Beautify** button at the top right to clean up your indentation).
 
 ```json
 "/customers": {
@@ -127,7 +127,7 @@ In **APIs** &gt; **Customers** &gt; **Define**. Add a new endpoint inside `paths
 }
 ```
 
-The endpoint is going to be at the path `/customers` and will return a list of customer objects (referencing the existing `Customer` schema). Add the `CustomerList` schema in `components` at the end of the file.
+The endpoint is going to be at the path `/customers` and will return a list of customer objects (referencing the existing `Customer` schema). Add the `CustomerList` schema in `components` &gt; `schemas` after the existing schema elements.
 
 ```json
 "CustomerList": {
@@ -178,7 +178,7 @@ In the API **Develop** tab, validate the linked mock. Click to review the issues
 
 ### Edit the spec
 
-Back in the spec, let's make a change to the examples and see how that propagates to the collection. Add a new property to the `Confirm` schema and make it required, so that the whole schema looks like this:
+Back in the spec, let's make a change to the examples and see how that propagates to the collection. Add a new `status` string property to the `Confirm` schema and make it required, so that the whole schema looks like this:
 
 ```json
 "Confirm": {
@@ -197,7 +197,7 @@ Back in the spec, let's make a change to the examples and see how that propagate
             "example": "OK"
         }
     }
-}
+},
 ```
 
 **Save** the spec and go back into the `POST` request in the mock collection–**Send** it.

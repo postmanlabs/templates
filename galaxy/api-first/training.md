@@ -27,17 +27,19 @@ You can access this page at the following short link: bit.ly/learn-api-first
 
 ## 1. Import the starter spec
 
-To get started, open the [customers](customers.yaml) file in a new tab and switch to the raw view, then download / save it locally.
+To get started, open the [customers](customers.json) file in a new tab and switch to the raw view, then download / save it locally.
 
 In [Postman](https://go.postman.co/build), navigate to the new workspace you created for this session, choose **APIs** on the left, and click **+** to create a new API.
 
 * `Customers` as the name.
 * `1.0` as the version.
+* `OpenAPI 3.0` as the schema type.
+* `JSON` as the schema format.
 * Import your downloaded spec file.
 
-**Save** the API–Postman will validate your schema and alert you to any issues within it. Open the __Define__ tab to see the specification YAML.
+**Save** the API–Postman will validate your schema and alert you to any issues within it. Open the __Define__ tab to see the specification JSON.
 
-> Try introducing a yaml syntax error into your spec file, or add an invalid element, to see how Postman highlights validation issues. Click the alert along the bottom to see more detail. As you edit, the validation will update. The editor will also prompt you with element suggestions as you type.
+> Try introducing a syntax error into your spec file, or add an invalid element, to see how Postman highlights validation issues. Click the alert along the bottom to see more detail. As you edit, the validation will update. The editor will also prompt you with element suggestions as you type.
 
 You don't need to worry too much about the detail in the spec, but note the following:
 
@@ -101,29 +103,39 @@ Let's make a change to the spec. We have endpoints for adding and retrieving a c
 
 In **APIs** &gt; **Customers** &gt; **Define**. Add a new endpoint inside `paths`, after the `post` request and before the `components` (making sure it's indented from `paths`).
 
-```yaml
-  /customers:
-    get:
-      summary: Retrieve details for all customers
-      operationId: listCustomers
-      tags:
-          - customer
-      responses:
-          '200':
-              description: Details of all customers
-              content:
-                  application/json:
-                      schema:
-                          $ref: '#/components/schemas/CustomerList'
+```json
+"/customers": {
+    "get": {
+        "summary": "Retrieve details for all customers",
+        "operationId": "listCustomers",
+        "tags": [
+            "customer"
+        ],
+        "responses": {
+            "200": {
+                "description": "Details of all customers",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/CustomerList"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 ```
 
 The endpoint is going to be at the path `/customers` and will return a list of customer objects (referencing the existing `Customer` schema). Add the `CustomerList` schema in `components` at the end of the file.
 
-```yaml
-    CustomerList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Customer'
+```json
+"CustomerList": {
+    "type": "array",
+    "items": {
+        "$ref": "#/components/schemas/Customer"
+    }
+}
 ```
 
 **Save** the spec. Back in **Develop**, validate the linked docs collection again. Click to **Review Issues**. Select the suggested changes and confirm, then navigate back to the collection to see the new endpoint.
@@ -132,8 +144,8 @@ The endpoint is going to be at the path `/customers` and will return a list of c
 
 Next we're going to create a collection we can use with a mock server we're also going to create. In the spec, change the URL to reference a variable as follows:
 
-```yaml
-  - url: '{{url}}'
+```json
+"url": "{{url}}"
 ```
 
 When we create the mock server, its address will be stored in a variable with this name, and we will be able to switch between the original server and the new mock using an environment.
@@ -168,19 +180,24 @@ In the API **Develop** tab, validate the linked mock. Click to review the issues
 
 Back in the spec, let's make a change to the examples and see how that propagates to the collection. Add a new property to the `Confirm` schema and make it required, so that the whole schema looks like this:
 
-```yaml
-    Confirm:
-      type: object
-      required:
-        - message
-        - status
-      properties:
-        message:
-          type: string
-          example: 'New customer added!'
-        status:
-            type: string
-            example: 'OK'
+```json
+"Confirm": {
+    "type": "object",
+    "required": [
+        "message",
+        "status"
+    ],
+    "properties": {
+        "message": {
+            "type": "string",
+            "example": "New customer added!"
+        },
+        "status": {
+            "type": "string",
+            "example": "OK"
+        }
+    }
+}
 ```
 
 **Save** the spec and go back into the `POST` request in the mock collection–**Send** it.
@@ -228,7 +245,7 @@ pm.test('Schema is valid', function() {
 
 > Tip: leave the test failing so that you see more interesting results when you add a monitor next.
 
-<!--todo: maybe run once in collection runner-->
+Try running your collection in the collection runner–select the collection and hit __Run__, running with the default options. Check out the output, selecting requests to drill down into the detail (which you can also do in the __Console__).
 
 ## 6. Add a monitor
 

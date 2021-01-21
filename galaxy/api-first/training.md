@@ -27,7 +27,7 @@ You can access this page at the following short link: bit.ly/learn-api-first
 
 ## 1. Import the starter spec
 
-To get started, open the [customers](customers.json) file in a new tab and switch to the raw view, then download / save it locally.
+To get started, open the [customers](https://github.com/postmanlabs/templates/blob/master/galaxy/api-first/customer.json) file in a new tab and switch to the raw view, then download / save it locally.
 
 In [Postman](https://go.postman.co/build), navigate to the new workspace you created for this session, choose **APIs** on the left, and click **+** to create a new API.
 

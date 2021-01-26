@@ -20,11 +20,11 @@ A template is a Postman collection that is published online and that you can [im
 * The learner completes the collection by editing request components, and adding new requests.
 * Each Postman collection is represented as JSON data, which you can retrieve via a public URL. When they have completed the steps, the learner copies their collection's public link into the final request to retrieve the JSON data. The request runs a test script on the collection JSON to check for completeness. The tests will pass if the learner has completed all of the required collection edits.
 
-The classroom template is available at a short url:
+The classroom template is in the Postman Student Program workspace–available at a short url:
 
-* [**bit.ly/postman-classroom**](http://bit.ly/postman-classroom)
+* [**bit.ly/student-workspace**](http://bit.ly/student-workspace)
 
-_If you plan on using the template in your classroom please try it out in Postman yourself first. Open the first request, send it, and open the Visualize view on the response. The instructions guide you through the steps–but you are also welcome to add your own context or any additional info you feel learners will benefit from._
+_If you plan on using the template in your classroom please try it out in Postman yourself first. Select the __Postman Classroom__ collection in __Collections__ on the left, and click __Fork__ to copy it into your own workspace. Open the first request, send it, and open the Visualize view on the response. The instructions guide you through the steps–but you are also welcome to add your own context or any additional info you feel learners will benefit from._
 
 Please check out the [Postman classroom curriculum](student.md) for pointers on topics. The list is generic but you are welcome to choose topics to suit your own programs and learning contexts. If you'd like to make suggestions on the curriculum or classroom experience [please submit an issue](https://github.com/postmanlabs/templates/issues)!
 

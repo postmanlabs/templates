@@ -1,36 +1,5 @@
 # Postman Galaxy 2021 - API First Training
 
-This directory includes supporting resources for the API First training session at Postman Galaxy 2021! During the session you're going to work through generating collections from an API specification file that you'll import and edit in Postman.
-
-> Adopting a best practice approach to your API development process isn't as much of a hurdle as you might expect.
-> 
-> By starting from an OpenAPI specification in Postman, you can generate multiple other components within a robust framework that delivers reliability and performance.
-> 
-> Having a spec act as your single source of truth sets your API product or project up for governance, maintainability, effective adoption, and ultimately a competitive advantage.
-
-**Before you start, make sure you have the Postman agent installed–we're going to be working in [Postman on the web](http://go.postman.co/build/) (not the desktop app). Make sure you also create a new workspace for the session–and make sure you choose a Public workspace, so that you can share it later, forwarding the link to request your API First certification. _You will need to make your team profile public in order to publish the workspace–follow the prompts to update the info you want visitors to see._**
-
-You can access this page at the following short link: bit.ly/learn-api-first
-
-* [Import the starter spec](#1-import-the-starter-spec)
-* [Generate a documentation collection](#2-generate-a-documentation-collection)
-  * [Validate](#validate)
-  * [View the docs](#view-the-docs)
-* [Add a new endpoint](#3-add-a-new-endpoint)
-* [Create a mock collection](#4-create-a-mock-collection)
-  * [Use environments](#use-environments)
-  * [Author examples](#author-examples)
-  * [Edit the spec](#edit-the-spec)
-* [Add a test suite](#5-add-a-test-suite)
-* [Add a monitor](#6-add-a-monitor)
-* [Complete your submission](#7-complete-your-submission)
-
-## 1. Import the starter spec
-
-To get started, open the [customers](https://github.com/postmanlabs/templates/blob/master/galaxy/api-first/customer.json) file in a new tab and switch to the raw view, then download / save it locally.
-
-# Postman Galaxy 2021 - API First Training
-
 This API includes supporting resources for the API First training session at Postman Galaxy 2021! During the session you're going to work through generating collections from this API specification.
 
 On completion of your submission for this training, you will receive the [Postman API First](https://badgr.com/public/badges/4ZMWYUmITU20Lf9JdAR6Xw) badge!

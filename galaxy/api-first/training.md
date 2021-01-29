@@ -270,5 +270,5 @@ pm.test("Schema is valid", function() {
     <p>📌 Note that a Postman team admin can set the account to require approval to make a workspace public via the
         <strong>Community Manager</strong> role.</p>
 </blockquote>
-<p>Fill out the form <a href='https://bit.ly/galaxy-first'>bit.ly/galaxy-first</a> (if anything is missing we will
+<p>Fill out the form <a href='https://bit.ly/submit-api-first'>bit.ly/submit-api-first</a> (if anything is missing we will
     follow up with you).</p>

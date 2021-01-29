@@ -10,7 +10,9 @@ On completion of your submission for this training, you will receive the [Postma
 
 ## The Customers specification
 
-Navigate to the public workspace shared for the session. In __APIs__, select __Customers__. Select the __Define__ tab.
+Navigate to the public workspace for the session: [bit.ly/postman-training](http://bit.ly/postman-training)
+
+In __APIs__, select __Customers__. Select the __Define__ tab.
 
 You don't need to worry too much about the detail in the spec, but note the following:
 

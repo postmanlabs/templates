@@ -25,15 +25,15 @@ Take a quick look at the tabs in the **API** builder–we'll get to know them be
 
 ## 1. Import the starter spec
 
-In the **Define** tab &gt; **Copy** the content of the specification using the button at the top right of the edit area.
+In the **Define** tab &gt; **Copy** the content of the specification using the button at the top right of the edit area (you can toggle back and forth between it and the API __Overview__ here).
 
-In the new workspace you created for this session, choose **APIs** on the left, and click **+** to create a new API.
+In the new workspace you created for this session (you might want to keep this tab open as well so that you can refer to the info here), choose **APIs** on the left, and click **+** to create a new API.
 
 * `Customers` as the name.
 * `1.0` as the version.
 * `OpenAPI 3.0` as the schema type.
 * `JSON` as the schema format.
-* Create your new API and paste in the content you copied.
+* Create your new API and paste in the content you copied (replace the default contents).
 
 > You can sync your Postman API with a linked spec, for example via GitHub integration.
 
@@ -50,7 +50,7 @@ Let's go ahead and generate a Postman collection from the spec. Click **Generate
 
 > 📌 Take a quick look at the advanced options–we don't need them for now but you can tailor the detail of how your collections generate from the spec.
 
-Click **Generate Collection** and Postman will add it in **Collections**. _If you click **View documentation** in the notification you can see the docs straight away._
+Click **Generate Collection** and Postman will add it in **Collections**. _If you click **View documentation** in the notification you can see the docs straight away._ **Keep the complete documentation view open in a tab as you work through the steps.**
 <br/><br/>
 Open the new collection and take a look at how the requests have been generated.
 
@@ -256,10 +256,10 @@ pm.test("Schema is valid", function() {
 </blockquote>
 <p>Give your monitor the name <code>Monitor customers</code>, select the <code>Mock customers</code> environment, choose
     a frequency, and create your monitor.</p>
-<p>Click the link to open the monitoring page in the web dashboard. Rather than waiting for the scheduled time, hit
+<p>Rather than waiting for the scheduled time, hit
     <strong>Run</strong>! There will be a short delay while your monitor runs but when it completes you will see an
     overview of the test results.</p>
-<p>Navigate back to the workspace / API and click the monitor name in <strong>Observe</strong>. You will see an overview
+<p>Navigate back to the API and click the monitor name in <strong>Observe</strong>. You will see an overview
     of the monitor runs. Click a run and scroll down to see the detail of any test fails. You can filter the results and
     drill down to individual requests.</p>
 <h2 id='7-complete-your-submission'>7. Complete your submission</h2>

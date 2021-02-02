@@ -50,7 +50,7 @@ Let's go ahead and generate a Postman collection from the spec. Click **Generate
 
 > 📌 Take a quick look at the advanced options–we don't need them for now but you can tailor the detail of how your collections generate from the spec.
 
-Click **Generate Collection** and Postman will add it in **Collections**. _If you click **View documentation** in the notification you can see the docs straight away._ **Keep the complete documentation view open in a tab as you work through the steps.**
+Click **Generate Collection** and Postman will add it in **Collections**. _If you click **View documentation** in the notification you can see the docs straight away, or open the collection from the left of Postman and open the docs using the button on the right._ **Keep the complete documentation view open in a tab as you work through the steps.**
 <br/><br/>
 Open the new collection and take a look at how the requests have been generated.
 

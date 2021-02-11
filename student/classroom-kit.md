@@ -28,6 +28,20 @@ _If you plan on using the template in your classroom please try it out in Postma
 
 Please check out the [Postman classroom curriculum](student.md) for pointers on topics. The list is generic but you are welcome to choose topics to suit your own programs and learning contexts. If you'd like to make suggestions on the curriculum or classroom experience [please submit an issue](https://github.com/postmanlabs/templates/issues)!
 
+## Checking Student Progress
+
+If you want to help students complete their student expert collections or check progress, you can ask them to share their collection links using the following steps:
+
+* Select the collection
+* Click __Share__
+* Click __Get public link__
+* Generate or update link (making sure the students update after every time they make a change as it's just a snapshot)
+* Copy the link
+
+If the students send you their links you can import their collections into Postman by clicking __Import__ &gt; __Link__. Then you can run the final request `Test collection` to check for completeness.
+
+> If you want to test a batch of collections you can do so using a data file–add each collection link on a new line in a `.csv` file with `your-collection-link-here` on the first line. Import the Student Expert or Classroom collection into your workspace (from [bit.ly/student-workspace](https://bit.ly/student-workspace)). Select the collection and click __Run__, choose the data file, and run–to identify any links that are failing, click the collection run output.
+
 ## Postman Classroom Slides
 
 The slide deck is available at a short url—it's in Google Slides but you can download and edit it however you like.
